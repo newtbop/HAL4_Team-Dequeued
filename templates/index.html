@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Echo — Audio Learning Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-950 text-white min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-md p-8 text-center">
+
+    <h1 class="text-4xl font-bold mb-12 tracking-tight">
+        🎧 Echo
+    </h1>
+
+    <!-- Upload Section -->
+    <div class="bg-gray-800 rounded-3xl p-8 mb-10 shadow-lg">
+
+        <input id="pdfFile"
+               type="file"
+               accept=".pdf"
+               class="w-full p-6 bg-gray-700 rounded-2xl mb-8 text-lg">
+
+        <button onclick="uploadPDF()"
+                class="w-full bg-emerald-600 hover:bg-emerald-700 p-6 rounded-2xl text-2xl font-bold transition duration-300">
+            Generate Summary
+        </button>
+
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="hidden text-xl font-semibold mb-8">
+        Processing your document...
+    </div>
+
+    <!-- Quiz Controls -->
+    <div id="quizControls" class="hidden space-y-6">
+
+        <button onclick="startVoiceQuiz()"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 p-6 rounded-2xl text-2xl font-bold transition">
+            🎤 Start Quiz
+        </button>
+
+        <button onclick="stopQuiz()"
+                class="w-full bg-red-600 hover:bg-red-700 p-6 rounded-2xl text-2xl font-bold transition">
+            ⛔ Stop Quiz
+        </button>
+
+    </div>
+
+    <!-- Voice Status -->
+    <div id="voiceStatus" class="mt-10 text-lg font-semibold text-indigo-400"></div>
+
+</div>
+
+<script src="/static/js/main.js"></script>
+
+</body>
+</html>
